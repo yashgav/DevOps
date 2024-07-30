@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PageController {
     @GetMapping("/page")
     public String page(Model model) {
-        int xx = 1234;
+        int xx = 12345;
         model.addAttribute("y", xx);
         return "index";
 
