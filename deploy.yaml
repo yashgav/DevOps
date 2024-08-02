@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yashtry-deployment
+  name: dep
 spec:
   replicas: 3
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: yashtry
-          image: yashtry:latest
-          imagePullPolicy: IfNot
+          image: yashtry10:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
