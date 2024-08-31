@@ -12,4 +12,6 @@ public class PageController {
         model.addAttribute("y", xx);
         return "index";
 
-    }}
+    }
+
+}

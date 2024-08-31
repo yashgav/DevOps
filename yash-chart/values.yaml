@@ -5,10 +5,10 @@
 replicaCount: 3
 
 image:
-  repository: yashtry10
-  pullPolicy: Never
+  repository: ygavaliptc/dka
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: v1
 
 imagePullSecrets: []
 nameOverride: ""
@@ -40,8 +40,10 @@ securityContext: {}
 # runAsUser: 1000
 
 service:
-  type: NodePort
-  port: 8080
+  type: LoadBalancer
+  port: 8090
+  targetPort: 8080
+
 
 ingress:
   enabled: false

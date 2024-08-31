@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dep
+  name: deploy-dka
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: yashtry
+      app: dka
   template:
     metadata:
       labels:
-        app: yashtry
+        app: dka
     spec:
       containers:
-        - name: yashtry
-          image: yashtry10:latest
+        - name: dka
+          image: dka:v1
           imagePullPolicy: Never
           ports:
             - containerPort: 8080

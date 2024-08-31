@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: yashtry-service
+  name: svc-dka
 spec:
   type: NodePort  #3 types of services NodePort, Loadbalancer, clusterip
   ports:
@@ -9,4 +9,4 @@ spec:
       port: 8080
       targetPort: 8080
   selector:
-    app: yashtry
+    app: dka
